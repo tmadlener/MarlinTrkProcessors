@@ -820,7 +820,6 @@ std::vector< int > DDSpacePointBuilder::getCellID0sAtBack( int cellID0 ){
     dd4hep::rec::ZDiskPetalsData* ft = ftdDE.extension<dd4hep::rec::ZDiskPetalsData>();
 
     int sensor = cellID[ LCTrackerCellID::sensor() ];
-    //int Nsensors = ft->layers.at(layer).petalNumber ; 
     int Nsensors = ft->layers.at(layer).sensorsPerPetal ;
 
     streamlog_out(DEBUG3) << " layer " << layer << " sensors " << Nsensors << std::endl; 
