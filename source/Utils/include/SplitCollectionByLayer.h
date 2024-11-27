@@ -30,6 +30,9 @@ protected:
 
   ///helper struct
   struct OutColInfo{
+    OutColInfo(const OutColInfo&) = default;
+    OutColInfo& operator=(const OutColInfo&) = default;
+
     std::vector<size_t> layers{} ;
     LCCollection* collection{nullptr};
     OutColInfo() : layers(std::vector<size_t>(0)), collection(nullptr) {}
